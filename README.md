@@ -18,15 +18,15 @@ You'll also need this software installed on your system
 ```
 sparkify-airflow/
  ├── dags
-    └── sparkify_dag.py     Primary dag for running the project  
+    └── sparkify_dag.py             Primary dag for running the project  
  ├── plugins     
     ├── helpers
     ├── operators
-         ├── data_quality.py
-         ├── load_dimension.py
+         ├── data_quality.py        Operator checks row count in given table
+         ├── load_dimension.py      Inserts rows from source to given destination
          ├── load_fact.py
          └── stage_redshift.py
- ├── README.md              Documentation of the project
- ├── dwh.cfg                Configuration file for setting up S3 sources/destinations & AWS credentials
- └── create_tables.sql      SQL DDL code setting up tables in Redshift 
+ ├── README.md                      Documentation of the project
+ ├── dwh.cfg                        Configuration file for setting up S3 sources/destinations & AWS credentials
+ └── create_tables.sql              SQL DDL code setting up tables in Redshift 
 ```
