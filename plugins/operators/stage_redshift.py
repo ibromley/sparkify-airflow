@@ -50,7 +50,7 @@ class StageToRedshiftOperator(BaseOperator):
                                              credentials.access_key,
                                              credentials.secret_key,
                                              self.ignore_headers,
-                                             self.delimeter
+                                             self.delimiter
         )
         redshift.run(formatted_sql)
 
